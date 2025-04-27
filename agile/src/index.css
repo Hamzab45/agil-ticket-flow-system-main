@@ -1,0 +1,80 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 45 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 100% 96%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 100% 50%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 45 100% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 45 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .yellow-gradient-text {
+    @apply bg-clip-text text-transparent bg-yellow-gradient font-bold;
+  }
+  
+  .agil-card {
+    @apply bg-white rounded-lg shadow-md border border-agil-gray-light p-6 transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .agil-button-primary {
+    @apply bg-yellow-gradient text-agil-black font-medium py-2 px-4 rounded-md transition-all duration-300 hover:shadow-md;
+  }
+  
+  .agil-button-secondary {
+    @apply bg-agil-black text-white font-medium py-2 px-4 rounded-md transition-all duration-300 hover:shadow-md;
+  }
+  
+  .agil-input {
+    @apply border border-agil-gray-light rounded-md px-4 py-2 w-full focus:ring-2 focus:ring-agil-yellow focus:border-transparent outline-none;
+  }
+}
